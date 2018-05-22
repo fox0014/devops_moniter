@@ -64,7 +64,7 @@ def post(ali_uid, metric_name, metric_value, unit, fields):
             http_client.request(method="POST", url=REMOTE_MONITOR_URI, body=data, headers=headers)
             response = http_client.getresponse()
             if response.status == 200:
-        print "upload metric succeed!"
+                print "upload metric succeed!"
                 return
             else:
                 print "response code %d, content %s " % (response.status, response.read())
@@ -84,7 +84,7 @@ if __name__ == '__main__':
     #    print arg
     if len(sys.argv) != 6:
         print "argv format should be:  aliuid, metricName, metricValue, unit, kvpairs"
-     print """
+        print """
         for example:
     python cms_post.py 1736511134389110 'Perm_Generation' 10 'Percent' 'instanceId=cmssiteprobeqd115029112222'
     """
