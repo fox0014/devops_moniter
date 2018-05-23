@@ -16,6 +16,12 @@ class my_Mysql_init(object):
         self.user = user
         self.password = password
         self.charset = charset
+        
+    def __del__(self):
+       #关闭连接，释放资源  
+        a,b=self.connect();
+        a.close()
+
     
     def connect(self):
         conn=pymysql.Connect(host=self.host,port=self.port,db=self.dbname,user=self.user,passwd=self.password,charset=self.charset);
@@ -52,7 +58,7 @@ class my_Mysql_init(object):
                 return (executeResult);  
             except Exception as e:
                 print("ERROR：execute sql failed.errorInfo =",e)
-                print("ERROR:FUNCTION executeSql execute failed.sqlLine =",sql)
+                print("ERROR:FUNCTION action_one execute failed.sqlLine =",sql)
                 con.rollback()
                 return str(e)
         else:
@@ -63,7 +69,3 @@ class my_Mysql_init(object):
         b.close()
         a.close()
         
-    def __del__(self):
-       #关闭连接，释放资源  
-        a,b=self.connect();
-        a.close()
