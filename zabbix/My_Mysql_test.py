@@ -4,7 +4,8 @@
 import time,os,re
 import My_Mysql
 
-mysql = My_Mysql.my_Mysql_init("10.62.11.51",3306,"mytest1","admin","admin")
+mysql = My_Mysql.my_Mysql_init("10.62.11.51",3306,"mytest01","admin","admin")
+mysql.connect()
 #执行单行sql
 ret1 = mysql.action_one("show databases")
 
@@ -22,3 +23,4 @@ print("ret1 = ",ret1)
 print("---------------------")
 for i in ret2:
     print(i)
+mysql.close()    

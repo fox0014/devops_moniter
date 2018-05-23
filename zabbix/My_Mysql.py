@@ -18,7 +18,7 @@ class my_Mysql_init(object):
         self.charset = charset
     
     def connect(self):
-        conn=pymysql.connect(self.host,self.port,self.dbname,self.user,self.password,self.charset);
+        conn=pymysql.Connect(host=self.host,port=self.port,db=self.dbname,user=self.user,passwd=self.password,charset=self.charset);
         cur=conn.cursor();
         return conn,cur
         
@@ -32,9 +32,9 @@ class my_Mysql_init(object):
                                 ])
         """  
         finalResultList = []
-        if sqlList:
-            for sql in sqlList:
-                executeResult = self.action_one(sql)
+        if sql:
+            for sqlList in sql:
+                executeResult = self.action_one(sqlList)
                 finalResultList.append(executeResult)
         else:
             print("ERROR:param sqlList is empty.")
@@ -43,24 +43,27 @@ class my_Mysql_init(object):
     def action_one(self,sql):                      #查找操作  
         """执行单条sql语句"""
         if sql and isinstance(sql,str):
-            connect,cursor=self.connect()
+            con,cursor=self.connect()
             executeResult = ""
             try:
                 cursor.execute(sql)
                 executeResult = cursor.fetchall()
-                connect.commit()
+                con.commit()
                 return (executeResult);  
             except Exception as e:
                 print("ERROR：execute sql failed.errorInfo =",e)
                 print("ERROR:FUNCTION executeSql execute failed.sqlLine =",sql)
-                connect.rollback()
+                con.rollback()
                 return str(e)
         else:
             print("ERROR:param sqlLine is empty or type is not str.sqlLine = ",sql)
      
     def close(self):
-        self.connect.close();
+        a,b=self.connect();
+        b.close()
+        a.close()
         
-   # def __del__(self):                    #关闭连接，释放资源  
-     #   self.cur.close(); 
-    #    self.conn.close();
+    def __del__(self):
+       #关闭连接，释放资源  
+        a,b=self.connect();
+        a.close()
