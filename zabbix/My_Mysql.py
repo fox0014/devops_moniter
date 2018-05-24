@@ -21,8 +21,7 @@ class my_Mysql_init(object):
        #关闭连接，释放资源  
         a,b=self.connect();
         a.close()
-
-    
+   
     def connect(self):
         conn=pymysql.Connect(host=self.host,port=self.port,db=self.dbname,user=self.user,passwd=self.password,charset=self.charset);
         cur=conn.cursor();
