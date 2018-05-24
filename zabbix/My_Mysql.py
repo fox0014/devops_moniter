@@ -57,11 +57,11 @@ class my_Mysql_init(object):
                 return (executeResult);  
             except Exception as e:
                 print("ERROR：execute sql failed.errorInfo =",e)
-                print("ERROR:FUNCTION action_one execute failed.sqlLine =",sql)
+                print("ERROR:FUNCTION action_one execute failed.sql =",sql)
                 con.rollback()
                 return str(e)
         else:
-            print("ERROR:param sqlLine is empty or type is not str.sqlLine = ",sql)
+            print("ERROR:param sql is empty or type is not str.sql = ",sql)
      
     def close(self):
         a,b=self.connect();

@@ -4,6 +4,10 @@
 import time,os,re
 import My_Mysql
 import shelve
+import sys
+
+reload(sys)
+sys.setdefaultencoding('utf-8') 
 
 
 
@@ -61,9 +65,14 @@ class my_Mysql_status_cache(My_Mysql.my_Mysql_init):
         namelist=self.action_one('SHOW DATABASES')
         cache=self.cache_init()
         for name in namelist:
-            if name[0] != "information_schema" and name[0] !="performance_schema":
-                print name
+            #转下编码，py2的痛点
+            name=(''.join(name)).encode('utf-8','strict')
+            if name != "information_schema" and name !="performance_schema":
                 data1=self.dbname_db_data(name)
+                data1=data1.split(',')
+                data1=(''.join(data1))
+                print type(data1)
+                print data1
                 my_temporary[name]=data1
         cache['mysql_data']=my_temporary
 
