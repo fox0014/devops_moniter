@@ -71,8 +71,7 @@ class my_Mysql_status_cache(My_Mysql.my_Mysql_init):
                 data1=self.dbname_db_data(name)
                 data1=data1.split(',')
                 data1=(''.join(data1))
-                print type(data1)
-                print data1
+                data1=data1.encode('utf-8','strict')
                 my_temporary[name]=data1
         cache['mysql_data']=my_temporary
 
