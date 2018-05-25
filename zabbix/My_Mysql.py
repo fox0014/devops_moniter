@@ -23,7 +23,7 @@ class my_Mysql_init(object):
         a.close()
    
     def connect(self):
-        conn=pymysql.Connect(host=self.host,port=self.port,db=self.dbname,user=self.user,passwd=self.password,charset=self.charset);
+        conn=pymysql.Connect(host=self.host,port=self.port,db=self.dbname,user=self.user,passwd=self.password,charset=self.charset,cursorclass=pymysql.cursors.DictCursor);
         cur=conn.cursor();
         return conn,cur
         
@@ -47,7 +47,9 @@ class my_Mysql_init(object):
      
     def action_one(self,sql):                      #查找操作  
         """执行单条sql语句"""
-        if sql and isinstance(sql,str):
+        if sql:
+#        if sql and isinstance(sql,str):
+#        兼容unicode
             con,cursor=self.connect()
             executeResult = ""
             try:
