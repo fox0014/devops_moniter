@@ -2,27 +2,22 @@
 # -*- coding:utf-8 -*-
 
 import time,os,re
-import My_Mysql
+import My_Mysql,My_Log
 import shelve
 import sys,json
 
 reload(sys)
 sys.setdefaultencoding('utf-8') 
 
-def remove_uni(s):
-    """remove the leading unicode designator from a string"""
-    s2 = ''
-    if s.startswith("u'"):
-        s2 = s.replace("u'", "'", 1)
-    elif s.startswith('u"'):
-        s2 = s.replace('u"', '"', 1)
-    return s2
+
 
 class my_Mysql_status(My_Mysql.my_Mysql_init):
     def __init__(self,host,port,dbname,user,password,charset="utf8"):
         super(my_Mysql_status,self).__init__(host,port,dbname,user,password,charset="utf8")
+        self.logger=My_Log.mylog()
     def the_sql_init(self):
         connect,cursor=self.connect()
+        self.logger.debug("%s is connect" % (self.host))
         return connect
     def the_sql_cursor(self):
         connect,cursor=self.connect()
@@ -32,10 +27,22 @@ class my_Mysql_status(My_Mysql.my_Mysql_init):
         mysql.ping() 
     def sql_processlist(self):
         return len(self.action_one("SHOW FULL PROCESSLIST"))
+    def dbname_db_all(self):
+        namelist=self.action_one('SHOW DATABASES')        
+        return namelist
     def dbname_db_data(self,dbname):        
         big_data1=self.action_one("SELECT CONCAT(ROUND(SUM(data_length/1024/1024),2),'MB') AS DATA FROM information_schema.tables WHERE table_schema='%s'" % dbname)
-        big_data_result=big_data1[0]
-        return str(big_data_result)
+        return big_data1[0]
+    def dbname_db_data_all(self):
+        my_temporary={}
+        namelist=self.dbname_db_all()
+        for name in namelist:
+            #转下编码，py2的痛点
+            name1=name['Database']
+            if name1 != "information_schema" and name1 !="performance_schema":
+                data1=self.dbname_db_data(name1)
+                my_temporary[name1]=data1['DATA']
+        return my_temporary
     
 
 class my_Mysql_status_cache(My_Mysql.my_Mysql_init):
@@ -75,10 +82,7 @@ class my_Mysql_status_cache(My_Mysql.my_Mysql_init):
             name1=name['Database']
             if name1 != "information_schema" and name1 !="performance_schema":
                 data1=self.dbname_db_data(name1)              
-#                data1=data1.split(',')               
-#                data1=(''.join(data1))
                 print data1
-#                data1=data1.encode('utf-8','strict')
                 my_temporary[name1]=data1
         cache['mysql_data']=my_temporary
 
@@ -86,16 +90,17 @@ class my_Mysql_status_cache(My_Mysql.my_Mysql_init):
 
 if __name__ == '__main__':
     try:
-        aa=my_Mysql_status_cache("10.62.11.51",3306,"mytest01","admin","admin")
+        aa=my_Mysql_status("10.62.11.51",3306,"mytest01","admin","admin")
         try:
             aa.the_sql_ping()
-            aa.dbname_db_data_all()
+            print aa.dbname_db_all()
+            print aa.dbname_db_data_all()
             print aa.sql_processlist()
-            bb=aa.cache_read()
-            print bb
-            aa.cache_close()
+#            bb=aa.cache_read()
+#            print json.dumps(bb)
+#            aa.cache_close()
         except Exception,e:
             print 'remote mysql have something wrong %s' % e
-            aa=my_Mysql_status_cache("10.62.11.51",3306,"mytest01","admin","admin")
+            aa=my_Mysql_status("10.62.11.51",3306,"mytest01","admin","admin")
     except Exception,e:
         print Exception,":",e
