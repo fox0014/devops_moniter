@@ -1,4 +1,4 @@
-#!/usr/bin/python  
+#!/usr/bin/python
 # -*- coding:utf-8 -*-
 
 import time,os,re
@@ -16,7 +16,7 @@ class my_Mysql_status(My_Mysql.my_Mysql_init):
         super(my_Mysql_status,self).__init__(host,port,dbname,user,password,charset="utf8")
         self.logger=My_Log.mylog()
     def the_sql_init(self):
-        connect,cursor=self.connect()
+        connect,cursor=self.connect()       
         self.logger.debug("%s is connect" % (self.host))
         return connect
     def the_sql_cursor(self):
