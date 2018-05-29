@@ -42,7 +42,7 @@ class my_Mysql_init(object):
                 executeResult = self.action_one(sqlList)
                 finalResultList.append(executeResult)
         else:
-            print("ERROR:param sqlList is empty.")
+            raise Exception("ERROR:param sqlList is empty.")
         return finalResultList    
      
     def action_one(self,sql):                      #查找操作  
@@ -58,12 +58,12 @@ class my_Mysql_init(object):
                 con.commit()
                 return (executeResult);  
             except Exception as e:
-                print("ERROR：execute sql failed.errorInfo =",e)
-                print("ERROR:FUNCTION action_one execute failed.sql =",sql)
+                raise Exception("ERROR：execute sql failed.errorInfo =",e)
+                raise Exception("ERROR:FUNCTION action_one execute failed.sql =",sql)
                 con.rollback()
                 return str(e)
         else:
-            print("ERROR:param sql is empty or type is not str.sql = ",sql)
+            raise Exception("ERROR:param sql is empty or type is not str.sql = ",sql)
      
     def close(self):
         a,b=self.connect();

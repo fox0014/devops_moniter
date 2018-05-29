@@ -2,22 +2,22 @@
 # -*- coding:utf-8 -*-
 
 import time,os,re
-import My_Mysql,My_Log
+import My_Mysql,My_Log,My_Config
 import shelve
 import sys,json
+import logging
 
 reload(sys)
 sys.setdefaultencoding('utf-8') 
-
+logger = logging.getLogger(__name__)
 
 
 class my_Mysql_status(My_Mysql.my_Mysql_init):
     def __init__(self,host,port,dbname,user,password,charset="utf8"):
         super(my_Mysql_status,self).__init__(host,port,dbname,user,password,charset="utf8")
-        self.logger=My_Log.mylog()
     def the_sql_init(self):
         connect,cursor=self.connect()       
-        self.logger.debug("%s is connect" % (self.host))
+        logger.info("%s is connect" % (self.host))
         return connect
     def the_sql_cursor(self):
         connect,cursor=self.connect()
@@ -89,18 +89,22 @@ class my_Mysql_status_cache(My_Mysql.my_Mysql_init):
      
 
 if __name__ == '__main__':
+    logger=My_Log.mylog()
     try:
+        print My_Config.getConfig("config/data.ini","my_mysql","dbhost")
         aa=my_Mysql_status("10.62.11.51",3306,"mytest01","admin","admin")
         try:
             aa.the_sql_ping()
             print aa.dbname_db_all()
             print aa.dbname_db_data_all()
-            print aa.sql_processlist()
+            print aa.sql_processlist()           
+            aa.close()
+            logger.info("%s is close" % ("10.62.11.51"))
 #            bb=aa.cache_read()
 #            print json.dumps(bb)
 #            aa.cache_close()
         except Exception,e:
-            print 'remote mysql have something wrong %s' % e
+            logger.exception('remote mysql have something wrong %s' % e)
             aa=my_Mysql_status("10.62.11.51",3306,"mytest01","admin","admin")
     except Exception,e:
         print Exception,":",e

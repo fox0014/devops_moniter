@@ -8,6 +8,6 @@ import logging.config
 
 def mylog():
     logging.config.fileConfig('config/logging.ini')
-    logger = logging.getLogger('infoLogger')
+    logger = logging.getLogger()
 #返回logger
     return logger

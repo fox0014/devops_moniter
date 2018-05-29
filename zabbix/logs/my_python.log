@@ -1,3 +1,76 @@
 2018-05-28 14:03:43,868 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 3568 - DEBUG: 10.62.11.51 is connect
 2018-05-28 17:08:35 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 7600 - DEBUG: 10.62.11.51 is connect
 2018-05-28 17:13:24 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 9400 - DEBUG: 10.62.11.51 is connect
+2018-05-28 17:56:40 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 12284 - DEBUG: 10.62.11.51 is connect
+2018-05-29 10:21:45 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 3436 - DEBUG: 10.62.11.51 is connect
+2018-05-29 10:27:00 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 8816 - DEBUG: 10.62.11.51 is connect
+2018-05-29 10:32:00 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 11104 - ERROR: Exception Logged
+Traceback (most recent call last):
+  File "D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py", line 96, in <module>
+    aa.the_sql_ping()
+  File "D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py", line 26, in the_sql_ping
+    mysql=self.the_sql_init()
+  File "D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py", line 19, in the_sql_init
+    connect,cursor=self.connect()
+  File "D:\huangyf\git\devops_moniter\zabbix\My_Mysql.py", line 26, in connect
+    conn=pymysql.Connect(host=self.host,port=self.port,db=self.dbname,user=self.user,passwd=self.password,charset=self.charset,cursorclass=pymysql.cursors.DictCursor);
+  File "D:\Python27\lib\site-packages\pymysql\__init__.py", line 90, in Connect
+    return Connection(*args, **kwargs)
+  File "D:\Python27\lib\site-packages\pymysql\connections.py", line 699, in __init__
+    self.connect()
+  File "D:\Python27\lib\site-packages\pymysql\connections.py", line 967, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on '10.62.11.55' (timed out)")
+2018-05-29 10:35:50 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 11024 - ERROR: remote mysql have something wrong (2003, "Can't connect to MySQL server on '10.62.11.55' (timed out)")
+Traceback (most recent call last):
+  File "D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py", line 96, in <module>
+    aa.the_sql_ping()
+  File "D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py", line 26, in the_sql_ping
+    mysql=self.the_sql_init()
+  File "D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py", line 19, in the_sql_init
+    connect,cursor=self.connect()
+  File "D:\huangyf\git\devops_moniter\zabbix\My_Mysql.py", line 26, in connect
+    conn=pymysql.Connect(host=self.host,port=self.port,db=self.dbname,user=self.user,passwd=self.password,charset=self.charset,cursorclass=pymysql.cursors.DictCursor);
+  File "D:\Python27\lib\site-packages\pymysql\__init__.py", line 90, in Connect
+    return Connection(*args, **kwargs)
+  File "D:\Python27\lib\site-packages\pymysql\connections.py", line 699, in __init__
+    self.connect()
+  File "D:\Python27\lib\site-packages\pymysql\connections.py", line 967, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on '10.62.11.55' (timed out)")
+2018-05-29 10:51:02 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 10676 - ERROR: remote mysql have something wrong (2003, "Can't connect to MySQL server on '10.62.11.55' (timed out)")
+Traceback (most recent call last):
+  File "D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py", line 96, in <module>
+    aa.the_sql_ping()
+  File "D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py", line 26, in the_sql_ping
+    mysql=self.the_sql_init()
+  File "D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py", line 19, in the_sql_init
+    connect,cursor=self.connect()
+  File "D:\huangyf\git\devops_moniter\zabbix\My_Mysql.py", line 26, in connect
+    conn=pymysql.Connect(host=self.host,port=self.port,db=self.dbname,user=self.user,passwd=self.password,charset=self.charset,cursorclass=pymysql.cursors.DictCursor);
+  File "D:\Python27\lib\site-packages\pymysql\__init__.py", line 90, in Connect
+    return Connection(*args, **kwargs)
+  File "D:\Python27\lib\site-packages\pymysql\connections.py", line 699, in __init__
+    self.connect()
+  File "D:\Python27\lib\site-packages\pymysql\connections.py", line 967, in connect
+    raise exc
+OperationalError: (2003, "Can't connect to MySQL server on '10.62.11.55' (timed out)")
+2018-05-29 10:51:24 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 10836 - DEBUG: 10.62.11.51 is connect
+2018-05-29 10:59:03 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 10856 - INFO: 10.62.11.51 is connect
+2018-05-29 10:59:03 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 10856 - INFO: 10.62.11.51 is close
+2018-05-29 10:59:54 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 3612 - INFO: 10.62.11.51 is connect
+2018-05-29 10:59:54 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 3612 - INFO: 10.62.11.51 is close
+2018-05-29 11:00:29 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 11000 - INFO: 10.62.11.51 is connect
+2018-05-29 11:00:31 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 11000 - INFO: 10.62.11.51 is close
+2018-05-29 11:00:39 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 1952 - INFO: 10.62.11.51 is connect
+2018-05-29 11:00:41 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 1952 - INFO: 10.62.11.51 is close
+2018-05-29 11:00:49 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 8180 - INFO: 10.62.11.51 is connect
+2018-05-29 11:01:09 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 8180 - INFO: 10.62.11.51 is close
+2018-05-29 11:01:48 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 7372 - INFO: 10.62.11.51 is connect
+2018-05-29 11:02:08 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 7372 - INFO: 10.62.11.51 is close
+2018-05-29 11:06:31,134 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 10388 - INFO: 10.62.11.51 is connect
+2018-05-29 11:06:31,209 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 10388 - INFO: 10.62.11.51 is close
+2018-05-29 11:50:52,197 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 10804 - INFO: 10.62.11.51 is connect
+2018-05-29 11:50:52,283 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 10804 - INFO: 10.62.11.51 is close
+2018-05-29 11:51:00,470 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 4216 - INFO: 10.62.11.51 is connect
+2018-05-29 11:51:00,539 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 4216 - INFO: 10.62.11.51 is close
