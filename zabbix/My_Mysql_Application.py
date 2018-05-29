@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 import time,os,re
-import My_Mysql,My_Log,My_Config
+import My_Mysql,My_Log,My_Config,My_Tool
 import shelve
 import sys,json
 import logging
@@ -91,8 +91,16 @@ class my_Mysql_status_cache(My_Mysql.my_Mysql_init):
 if __name__ == '__main__':
     logger=My_Log.mylog()
     try:
-        print My_Config.getConfig("config/data.ini","my_mysql","dbhost")
-        aa=my_Mysql_status("10.62.11.51",3306,"mytest01","admin","admin")
+        myconfig="config/data.ini"
+        dbhost=My_Config.getConfig(myconfig,"my_mysql","dbhost")
+        dbport=int(My_Config.getConfig(myconfig,"my_mysql","dbport"))
+        dbname=My_Config.getConfig(myconfig,"my_mysql","dbname")
+        dbuser=My_Config.getConfig(myconfig,"my_mysql","dbuser")
+        dbpassword=My_Config.getConfig(myconfig,"my_mysql","dbpassword")
+        dbcharset=My_Config.getConfig(myconfig,"my_mysql","dbcharset")
+        my_secret = My_Tool.prpcrypt('fansfansfansfans')
+        dbpassword = my_secret.decrypt(dbpassword)
+        aa=my_Mysql_status(dbhost,dbport,dbname,dbuser,dbpassword)
         try:
             aa.the_sql_ping()
             print aa.dbname_db_all()
@@ -107,4 +115,4 @@ if __name__ == '__main__':
             logger.exception('remote mysql have something wrong %s' % e)
             aa=my_Mysql_status("10.62.11.51",3306,"mytest01","admin","admin")
     except Exception,e:
-        print Exception,":",e
+        logger.exception('something wrong %s' % e)
