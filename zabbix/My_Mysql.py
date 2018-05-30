@@ -16,16 +16,21 @@ class my_Mysql_init(object):
         self.user = user
         self.password = password
         self.charset = charset
+        self.conn=''
+        
         
     def __del__(self):
        #关闭连接，释放资源  
-        a,b=self.connect();
-        a.close()
+       if self.conn.open:
+           self.conn.close()
    
     def connect(self):
-        conn=pymysql.Connect(host=self.host,port=self.port,db=self.dbname,user=self.user,passwd=self.password,charset=self.charset,cursorclass=pymysql.cursors.DictCursor);
-        cur=conn.cursor();
-        return conn,cur
+        if self.conn and self.cur:
+            return self.conn,self.cur
+        else:
+            self.conn=pymysql.Connect(host=self.host,port=self.port,db=self.dbname,user=self.user,passwd=self.password,charset=self.charset,cursorclass=pymysql.cursors.DictCursor);
+            self.cur=self.conn.cursor();
+            return self.conn,self.cur
         
     def action_many(self,sql):                      #查找操作  
         """

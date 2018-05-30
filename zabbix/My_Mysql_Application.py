@@ -16,8 +16,9 @@ class my_Mysql_status(My_Mysql.my_Mysql_init):
     def __init__(self,host,port,dbname,user,password,charset="utf8"):
         super(my_Mysql_status,self).__init__(host,port,dbname,user,password,charset="utf8")
     def the_sql_init(self):
-        connect,cursor=self.connect()       
-        logger.info("%s is connect" % (self.host))
+        connect,cursor=self.connect()
+        my_conId=self.action_one('SELECT CONNECTION_ID();')    
+        logger.info("%s is connect ID %s" % (self.host,my_conId[0]['CONNECTION_ID()']))
         return connect
     def the_sql_cursor(self):
         connect,cursor=self.connect()
@@ -25,7 +26,7 @@ class my_Mysql_status(My_Mysql.my_Mysql_init):
     def the_sql_ping(self):
         mysql=self.the_sql_init()
         mysql.ping() 
-    def sql_processlist(self):
+    def sql_processlist(self):       
         return len(self.action_one("SHOW FULL PROCESSLIST"))
     def dbname_db_all(self):
         namelist=self.action_one('SHOW DATABASES')        
@@ -43,6 +44,8 @@ class my_Mysql_status(My_Mysql.my_Mysql_init):
                 data1=self.dbname_db_data(name1)
                 my_temporary[name1]=data1['DATA']
         return my_temporary
+    def dbname_global_status(self,order):
+        return self.action_one("SHOW GLOBAL STATUS where variable_name = '%s'" % (order))
     
 
 class my_Mysql_status_cache(My_Mysql.my_Mysql_init):
@@ -105,14 +108,17 @@ if __name__ == '__main__':
             aa.the_sql_ping()
             print aa.dbname_db_all()
             print aa.dbname_db_data_all()
-            print aa.sql_processlist()           
+            print aa.sql_processlist()
+            aa.sql_processlist()
+            aa.sql_processlist()
+            print aa.dbname_global_status('Com_commit')
             aa.close()
-            logger.info("%s is close" % ("10.62.11.51"))
+            logger.info("%s is close" % (dbhost))
 #            bb=aa.cache_read()
 #            print json.dumps(bb)
 #            aa.cache_close()
         except Exception,e:
             logger.exception('remote mysql have something wrong %s' % e)
-            aa=my_Mysql_status("10.62.11.51",3306,"mytest01","admin","admin")
+            aa=my_Mysql_status(dbhost,dbport,dbname,dbuser,dbpassword)
     except Exception,e:
         logger.exception('something wrong %s' % e)

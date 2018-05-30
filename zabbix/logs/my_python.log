@@ -1,12 +1,8 @@
-2018-05-28 14:03:43,868 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 3568 - DEBUG: 10.62.11.51 is connect
-2018-05-28 17:08:35 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 7600 - DEBUG: 10.62.11.51 is connect
-2018-05-28 17:13:24 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 9400 - DEBUG: 10.62.11.51 is connect
-2018-05-28 17:56:40 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 12284 - DEBUG: 10.62.11.51 is connect
-2018-05-29 10:21:45 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 3436 - DEBUG: 10.62.11.51 is connect
-2018-05-29 10:27:00 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 8816 - DEBUG: 10.62.11.51 is connect
-2018-05-29 10:32:00 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 11104 - ERROR: Exception Logged
+2018-05-29 13:25:05,216 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 4236 - INFO: 10.62.11.51 is connect
+2018-05-29 13:25:05,301 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 4236 - INFO: 10.62.11.51 is close
+2018-05-29 14:21:45,147 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 9140 - ERROR: remote mysql have something wrong %d format: a number is required, not str
 Traceback (most recent call last):
-  File "D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py", line 96, in <module>
+  File "D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py", line 103, in <module>
     aa.the_sql_ping()
   File "D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py", line 26, in the_sql_ping
     mysql=self.the_sql_init()
@@ -18,12 +14,14 @@ Traceback (most recent call last):
     return Connection(*args, **kwargs)
   File "D:\Python27\lib\site-packages\pymysql\connections.py", line 699, in __init__
     self.connect()
-  File "D:\Python27\lib\site-packages\pymysql\connections.py", line 967, in connect
-    raise exc
-OperationalError: (2003, "Can't connect to MySQL server on '10.62.11.55' (timed out)")
-2018-05-29 10:35:50 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 11024 - ERROR: remote mysql have something wrong (2003, "Can't connect to MySQL server on '10.62.11.55' (timed out)")
+  File "D:\Python27\lib\site-packages\pymysql\connections.py", line 926, in connect
+    self.host_info = "socket %s:%d" % (self.host, self.port)
+TypeError: %d format: a number is required, not str
+2018-05-29 14:22:02,362 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 1824 - INFO: 10.62.11.51 is connect
+2018-05-29 14:22:02,444 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 1824 - INFO: 10.62.11.51 is close
+2018-05-29 15:11:44,420 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 8568 - ERROR: remote mysql have something wrong (1045, u"Access denied for user 'admin'@'10.61.60.170' (using password: YES)")
 Traceback (most recent call last):
-  File "D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py", line 96, in <module>
+  File "D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py", line 103, in <module>
     aa.the_sql_ping()
   File "D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py", line 26, in the_sql_ping
     mysql=self.the_sql_init()
@@ -35,42 +33,107 @@ Traceback (most recent call last):
     return Connection(*args, **kwargs)
   File "D:\Python27\lib\site-packages\pymysql\connections.py", line 699, in __init__
     self.connect()
-  File "D:\Python27\lib\site-packages\pymysql\connections.py", line 967, in connect
-    raise exc
-OperationalError: (2003, "Can't connect to MySQL server on '10.62.11.55' (timed out)")
-2018-05-29 10:51:02 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 10676 - ERROR: remote mysql have something wrong (2003, "Can't connect to MySQL server on '10.62.11.55' (timed out)")
+  File "D:\Python27\lib\site-packages\pymysql\connections.py", line 936, in connect
+    self._request_authentication()
+  File "D:\Python27\lib\site-packages\pymysql\connections.py", line 1156, in _request_authentication
+    auth_packet = self._read_packet()
+  File "D:\Python27\lib\site-packages\pymysql\connections.py", line 1018, in _read_packet
+    packet.check_error()
+  File "D:\Python27\lib\site-packages\pymysql\connections.py", line 384, in check_error
+    err.raise_mysql_exception(self._data)
+  File "D:\Python27\lib\site-packages\pymysql\err.py", line 107, in raise_mysql_exception
+    raise errorclass(errno, errval)
+OperationalError: (1045, u"Access denied for user 'admin'@'10.61.60.170' (using password: YES)")
+2018-05-29 15:19:08,058 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 8964 - ERROR: something wrong name 'prpcrypt' is not defined
 Traceback (most recent call last):
-  File "D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py", line 96, in <module>
+  File "D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py", line 101, in <module>
+    my_secret = prpcrypt('fansfansfansfans')
+NameError: name 'prpcrypt' is not defined
+2018-05-29 15:19:59,457 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 9168 - INFO: 10.62.11.51 is connect
+2018-05-29 15:19:59,538 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 9168 - INFO: 10.62.11.51 is close
+2018-05-29 15:33:02,974 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 10864 - INFO: 10.62.11.51 is connect
+2018-05-29 15:33:03,056 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 10864 - INFO: 10.62.11.51 is close
+2018-05-29 15:48:19,497 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 8624 - INFO: 10.62.11.51 is connect
+2018-05-29 15:48:19,605 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 8624 - INFO: 10.62.11.51 is close
+2018-05-29 16:03:12,973 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 10268 - INFO: 10.62.11.51 is connect
+2018-05-29 16:03:13,052 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 10268 - ERROR: remote mysql have something wrong 'Com_commit'
+Traceback (most recent call last):
+  File "D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py", line 111, in <module>
+    print aa.dbname_global_status()[0]['Com_commit']
+KeyError: 'Com_commit'
+2018-05-29 16:03:20,553 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 2036 - INFO: 10.62.11.51 is connect
+2018-05-29 16:03:20,642 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 2036 - INFO: 10.62.11.51 is close
+2018-05-29 16:03:28,170 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 7588 - INFO: 10.62.11.51 is connect
+2018-05-29 16:03:28,265 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 7588 - INFO: 10.62.11.51 is close
+2018-05-29 16:05:56,440 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 10292 - INFO: 10.62.11.51 is connect
+2018-05-29 16:05:56,542 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 10292 - INFO: 10.62.11.51 is close
+2018-05-29 16:56:24,361 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 9896 - INFO: 10.62.11.51 is connect
+2018-05-29 16:56:24,440 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 9896 - INFO: 10.62.11.51 is close
+2018-05-29 16:57:03,664 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 11972 - INFO: 10.62.11.51 is connect
+2018-05-29 16:57:03,737 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 11972 - INFO: 10.62.11.51 is close
+2018-05-29 17:02:25,486 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 9636 - INFO: 10.62.11.51 is connect
+2018-05-29 17:02:25,552 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 9636 - ERROR: remote mysql have something wrong dbname_global_status() takes exactly 2 arguments (1 given)
+Traceback (most recent call last):
+  File "D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py", line 111, in <module>
+    print aa.dbname_global_status()
+TypeError: dbname_global_status() takes exactly 2 arguments (1 given)
+2018-05-29 17:02:50,289 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 11392 - INFO: 10.62.11.51 is connect
+2018-05-29 17:02:50,361 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 11392 - INFO: 10.62.11.51 is close
+2018-05-29 17:20:31,951 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 11044 - INFO: 10.62.11.51 is connect
+2018-05-29 17:20:32,032 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 11044 - INFO: 10.62.11.51 is close
+2018-05-29 17:20:38,257 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 11228 - INFO: 10.62.11.51 is connect
+2018-05-29 17:20:38,328 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 11228 - INFO: 10.62.11.51 is close
+2018-05-29 17:27:23,030 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 1472 - INFO: 10.62.11.51 is connect
+2018-05-29 17:27:23,119 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 1472 - ERROR: remote mysql have something wrong 'dict' object has no attribute 'Value'
+Traceback (most recent call last):
+  File "D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py", line 112, in <module>
+    print aa.dbname_global_status('Com_commit')[0].Value
+AttributeError: 'dict' object has no attribute 'Value'
+2018-05-29 17:31:45,615 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 11008 - INFO: 10.62.11.51 is connect
+2018-05-29 17:31:45,690 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 11008 - INFO: 10.62.11.51 is close
+2018-05-30 09:20:18,904 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 10220 - INFO: 10.62.11.51 is connect
+2018-05-30 09:20:18,928 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 10220 - ERROR: remote mysql have something wrong list indices must be integers, not str
+Traceback (most recent call last):
+  File "D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py", line 110, in <module>
+    print aa.dbname_db_data_all()
+  File "D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py", line 42, in dbname_db_data_all
+    name1=name['Database']
+TypeError: list indices must be integers, not str
+2018-05-30 09:24:13,621 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 9036 - INFO: 10.62.11.51 is connect
+2018-05-30 09:24:13,703 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 9036 - INFO: 10.62.11.51 is close
+2018-05-30 09:24:35,934 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 8832 - INFO: 10.62.11.51 is connect
+2018-05-30 09:24:36,043 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 8832 - INFO: 10.62.11.51 is close
+2018-05-30 09:37:47,904 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 10160 - ERROR: remote mysql have something wrong global name 'conn' is not defined
+Traceback (most recent call last):
+  File "D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py", line 108, in <module>
     aa.the_sql_ping()
   File "D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py", line 26, in the_sql_ping
     mysql=self.the_sql_init()
   File "D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py", line 19, in the_sql_init
     connect,cursor=self.connect()
-  File "D:\huangyf\git\devops_moniter\zabbix\My_Mysql.py", line 26, in connect
-    conn=pymysql.Connect(host=self.host,port=self.port,db=self.dbname,user=self.user,passwd=self.password,charset=self.charset,cursorclass=pymysql.cursors.DictCursor);
-  File "D:\Python27\lib\site-packages\pymysql\__init__.py", line 90, in Connect
-    return Connection(*args, **kwargs)
-  File "D:\Python27\lib\site-packages\pymysql\connections.py", line 699, in __init__
-    self.connect()
-  File "D:\Python27\lib\site-packages\pymysql\connections.py", line 967, in connect
-    raise exc
-OperationalError: (2003, "Can't connect to MySQL server on '10.62.11.55' (timed out)")
-2018-05-29 10:51:24 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 10836 - DEBUG: 10.62.11.51 is connect
-2018-05-29 10:59:03 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 10856 - INFO: 10.62.11.51 is connect
-2018-05-29 10:59:03 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 10856 - INFO: 10.62.11.51 is close
-2018-05-29 10:59:54 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 3612 - INFO: 10.62.11.51 is connect
-2018-05-29 10:59:54 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 3612 - INFO: 10.62.11.51 is close
-2018-05-29 11:00:29 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 11000 - INFO: 10.62.11.51 is connect
-2018-05-29 11:00:31 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 11000 - INFO: 10.62.11.51 is close
-2018-05-29 11:00:39 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 1952 - INFO: 10.62.11.51 is connect
-2018-05-29 11:00:41 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 1952 - INFO: 10.62.11.51 is close
-2018-05-29 11:00:49 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 8180 - INFO: 10.62.11.51 is connect
-2018-05-29 11:01:09 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 8180 - INFO: 10.62.11.51 is close
-2018-05-29 11:01:48 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 7372 - INFO: 10.62.11.51 is connect
-2018-05-29 11:02:08 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 7372 - INFO: 10.62.11.51 is close
-2018-05-29 11:06:31,134 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 10388 - INFO: 10.62.11.51 is connect
-2018-05-29 11:06:31,209 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 10388 - INFO: 10.62.11.51 is close
-2018-05-29 11:50:52,197 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 10804 - INFO: 10.62.11.51 is connect
-2018-05-29 11:50:52,283 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 10804 - INFO: 10.62.11.51 is close
-2018-05-29 11:51:00,470 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 4216 - INFO: 10.62.11.51 is connect
-2018-05-29 11:51:00,539 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 4216 - INFO: 10.62.11.51 is close
+  File "D:\huangyf\git\devops_moniter\zabbix\My_Mysql.py", line 27, in connect
+    self.cur=conn.cursor();
+NameError: global name 'conn' is not defined
+2018-05-30 09:38:07,358 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 9248 - INFO: 10.62.11.51 is connect
+2018-05-30 09:38:07,476 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 9248 - INFO: 10.62.11.51 is close
+2018-05-30 09:44:06,154 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 9616 - INFO: 10.62.11.51 is connect
+2018-05-30 09:44:06,198 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 9616 - INFO: 10.62.11.51 is close
+2018-05-30 09:47:00,493 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 9248 - INFO: 10.62.11.51 is connect
+2018-05-30 09:47:00,539 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 9248 - INFO: 10.62.11.51 is close
+2018-05-30 09:53:21,898 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 8652 - INFO: 10.62.11.51 is connect
+2018-05-30 09:53:21,941 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 8652 - INFO: 10.62.11.51 is close
+2018-05-30 10:07:37,339 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 9548 - INFO: 10.62.11.51 is connect ID [{u'CONNECTION_ID()': 2127}]
+2018-05-30 10:07:37,369 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 9548 - INFO: 10.62.11.51 is close
+2018-05-30 10:09:08,562 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 8276 - ERROR: remote mysql have something wrong 'CONNECTION_ID'
+Traceback (most recent call last):
+  File "D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py", line 108, in <module>
+    aa.the_sql_ping()
+  File "D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py", line 27, in the_sql_ping
+    mysql=self.the_sql_init()
+  File "D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py", line 21, in the_sql_init
+    logger.info("%s is connect ID %s" % (self.host,my_conId[0]['CONNECTION_ID']))
+KeyError: 'CONNECTION_ID'
+2018-05-30 10:09:50,075 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 2284 - INFO: 10.62.11.51 is connect ID 2129
+2018-05-30 10:09:50,128 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 2284 - INFO: 10.62.11.51 is close
+2018-05-30 10:13:13,717 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 9376 - INFO: 10.62.11.51 is connect ID 2130
+2018-05-30 10:13:13,757 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 9376 - INFO: 10.62.11.51 is close
