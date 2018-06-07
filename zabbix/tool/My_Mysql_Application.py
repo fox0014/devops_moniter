@@ -2,7 +2,7 @@
 # -*- coding:utf-8 -*-
 
 import time,os,re
-import tool.data.My_Mysql,tool.My_Log,tool.My_Config,tool.logic.My_Tool
+import data.My_Mysql,My_Log,My_Config,logic.My_Tool
 import shelve
 import sys,json
 import logging
@@ -12,7 +12,7 @@ sys.setdefaultencoding('utf-8')
 logger = logging.getLogger(__name__)
 
 
-class my_Mysql_status(tool.data.My_Mysql.my_Mysql_init):
+class my_Mysql_status(data.My_Mysql.my_Mysql_init):
     def __init__(self,host,port,dbname,user,password,charset="utf8"):
         super(my_Mysql_status,self).__init__(host,port,dbname,user,password,charset="utf8")
     def the_sql_init(self):
@@ -48,7 +48,7 @@ class my_Mysql_status(tool.data.My_Mysql.my_Mysql_init):
         return self.action_one("SHOW GLOBAL STATUS where variable_name = '%s'" % (order))
     
 
-class my_Mysql_status_cache(tool.data.My_Mysql.my_Mysql_init):
+class my_Mysql_status_cache(data.My_Mysql.my_Mysql_init):
     def __init__(self,host,port,dbname,user,password,charset="utf8"):
         super(my_Mysql_status_cache,self).__init__(host,port,dbname,user,password,charset="utf8")
     def cache_init(self,filename='mysql_cache_db'):
@@ -92,18 +92,19 @@ class my_Mysql_status_cache(tool.data.My_Mysql.my_Mysql_init):
      
 
 if __name__ == '__main__':
-    logconfile=os.path.join(os.path.dirname(sys.argv[0]),"config","logging.ini")
-    mysqlconfile=os.path.join(os.path.dirname(sys.argv[0]),"config","data.ini")
-    logger=tool.My_Log.mylog(logconfile)
+    confile=os.path.abspath(os.path.join(os.path.dirname(sys.argv[0]),".."))
+    logconfile=os.path.join(confile,"config","logging.ini")
+    mysqlconfile=os.path.join(confile,"config","data.ini")
+    logger=My_Log.mylog(logconfile)
     try:
         myconfig=mysqlconfile
-        dbhost=tool.My_Config.getConfig(myconfig,"my_mysql","dbhost")
-        dbport=int(tool.My_Config.getConfig(myconfig,"my_mysql","dbport"))
-        dbname=tool.My_Config.getConfig(myconfig,"my_mysql","dbname")
-        dbuser=tool.My_Config.getConfig(myconfig,"my_mysql","dbuser")
-        dbpassword=tool.My_Config.getConfig(myconfig,"my_mysql","dbpassword")
-        dbcharset=tool.My_Config.getConfig(myconfig,"my_mysql","dbcharset")
-        my_secret = tool.logic.My_Tool.prpcrypt('fansfansfansfans')
+        dbhost=My_Config.getConfig(myconfig,"my_mysql","dbhost")
+        dbport=int(My_Config.getConfig(myconfig,"my_mysql","dbport"))
+        dbname=My_Config.getConfig(myconfig,"my_mysql","dbname")
+        dbuser=My_Config.getConfig(myconfig,"my_mysql","dbuser")
+        dbpassword=My_Config.getConfig(myconfig,"my_mysql","dbpassword")
+        dbcharset=My_Config.getConfig(myconfig,"my_mysql","dbcharset")
+        my_secret = logic.My_prpcrypt('fansfansfansfans')
         dbpassword = my_secret.decrypt(dbpassword)
         aa=my_Mysql_status(dbhost,dbport,dbname,dbuser,dbpassword)
         try:
