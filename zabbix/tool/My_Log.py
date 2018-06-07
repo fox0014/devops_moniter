@@ -6,8 +6,8 @@ import logging.config
 
 #日志
 
-def mylog():
-    logging.config.fileConfig('config/logging.ini')
+def mylog(confile):
+    logging.config.fileConfig(confile)
     logger = logging.getLogger()
 #返回logger
     return logger
