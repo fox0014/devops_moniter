@@ -9,7 +9,8 @@ import logging
 
 reload(sys)
 sys.setdefaultencoding('utf-8') 
-logger = logging.getLogger(__name__)
+#logger = logging.getLogger(__name__)
+logger = logging.getLogger()
 
 
 class my_Mysql_status(data.My_Mysql.my_Mysql_init):
