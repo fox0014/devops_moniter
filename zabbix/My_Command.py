@@ -29,8 +29,7 @@ if __name__ == '__main__':
             try:
                 aa.the_sql_ping()
                 if my_args.dbdata:
-                    print aa.dbname_db_data_all()
-                    print my_args.dbdata
+                    print aa.dbname_db_data(my_args.dbdata)
                 else:
                     print aa.dbname_db_all()
                     print aa.sql_processlist()
