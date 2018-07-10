@@ -1,9 +1,6 @@
 #!/usr/bin/python  
 # -*- coding:utf-8 -*-
 
-
-
-#coding: utf8  
 import sys  
 from Crypto.Cipher import AES  
 from binascii import b2a_hex, a2b_hex  
@@ -37,6 +34,13 @@ class prpcrypt():
         plain_text = cryptor.decrypt(a2b_hex(text))  
         return plain_text.rstrip('\0')  
    
+class mylist_filter():  
+    def __init__(self, key):  
+        self.key = key  
+    def manylist_filter(self,list):
+        for key in list:
+            print key[self.key]
+
 
 def remove_uni(s):
     """remove the leading unicode designator from a string"""

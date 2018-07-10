@@ -6,7 +6,8 @@ import tool.My_Mysql_Application
 import tool.My_Log,tool.logic.My_Tool
 import tool.My_Config as My_Config
 import os,sys
-    
+
+
 
 if __name__ == '__main__':
     my_args=tool.My_Option.my_parser(prog='Myprogram')
@@ -31,19 +32,18 @@ if __name__ == '__main__':
                 if my_args.dbdata:
                     print aa.dbname_db_data(my_args.dbdata)
                 else:
-                    print aa.dbname_db_all()
-                    print aa.sql_processlist()
-                    aa.sql_processlist()
-                    aa.sql_processlist()
-                    print aa.dbname_global_status('Com_commit')                   
+                    mylist_filter=tool.logic.My_Tool.mylist_filter('Database')
+                    mylist_filter.manylist_filter(aa.dbname_db_all())
+#                    print aa.sql_processlist()
+#                    print aa.dbname_global_status('Com_commit')                   
                 aa.close()
-                logger.info("%s is close" % (dbhost))                        
+                logger.info("%s is close" % (dbhost))                  
 #            bb=aa.cache_read()
 #            print json.dumps(bb)
 #            aa.cache_close()
             except Exception,e:
                 logger.exception('remote mysql have something wrong %s' % e)
-                aa=my_Mysql_status(dbhost,dbport,dbname,dbuser,dbpassword)
+                aa=tool.My_Mysql_Application.my_Mysql_status(dbhost,dbport,dbname,dbuser,dbpassword)
         elif my_args.datasource == 'redis':
             print "now not support"
         else:
