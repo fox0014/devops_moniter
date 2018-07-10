@@ -2,8 +2,13 @@
 # -*- coding:utf-8 -*-
 
 import time,os,re
-import pymysql
-import pymysql.cursors
+
+try:
+    import pymysql as mysql
+    import pymysql.cursors as cursors
+except ImportError:
+    import MySQLdb as mysql
+    import MySQLdb.cursors as cursors
 
 
 #mysql 方法操作 
@@ -28,7 +33,7 @@ class my_Mysql_init(object):
         if self.conn and self.cur:
             return self.conn,self.cur
         else:
-            self.conn=pymysql.Connect(host=self.host,port=self.port,db=self.dbname,user=self.user,passwd=self.password,charset=self.charset,cursorclass=pymysql.cursors.DictCursor);
+            self.conn=mysql.Connect(host=self.host,port=self.port,db=self.dbname,user=self.user,passwd=self.password,charset=self.charset,cursorclass=cursors.DictCursor);
             self.cur=self.conn.cursor();
             return self.conn,self.cur
         
