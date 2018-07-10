@@ -30,7 +30,8 @@ if __name__ == '__main__':
             try:
                 aa.the_sql_ping()
                 if my_args.dbdata:
-                    print aa.dbname_db_data(my_args.dbdata)
+                    mylist_filter=tool.logic.My_Tool.mylist_filter('DATA')
+                    mylist_filter.onelist_filter(aa.dbname_db_data(my_args.dbdata))
                 else:
                     mylist_filter=tool.logic.My_Tool.mylist_filter('Database')
                     mylist_filter.manylist_filter(aa.dbname_db_all())

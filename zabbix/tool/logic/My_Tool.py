@@ -40,6 +40,8 @@ class mylist_filter():
     def manylist_filter(self,list):
         for key in list:
             print key[self.key]
+    def onelist_filter(self,list):
+        print list[self.key]    
 
 
 def remove_uni(s):
