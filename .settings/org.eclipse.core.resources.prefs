@@ -1,0 +1,14 @@
+eclipse.preferences.version=1
+encoding//aliyun/custom_item/my_Moniter.py=utf-8
+encoding//aliyun/custom_item/my_alone_thread.py=utf-8
+encoding//aliyun/custom_item/my_alone_thread_pool.py=utf-8
+encoding//aliyun/custom_item/my_daemon.py=utf-8
+encoding//aliyun/custom_item/my_redis.py=utf-8
+encoding//aliyun/custom_item/my_structure_tools.py=utf-8
+encoding//zabbix/My_Command.py=utf-8
+encoding//zabbix/tool/My_Config.py=utf-8
+encoding//zabbix/tool/My_Log.py=utf-8
+encoding//zabbix/tool/My_Mysql_Application.py=utf-8
+encoding//zabbix/tool/My_Option.py=utf-8
+encoding//zabbix/tool/data/My_Mysql.py=utf-8
+encoding//zabbix/tool/logic/My_Tool.py=utf-8

@@ -1,4 +1,180 @@
-2018-06-07 11:12:02,210 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 10172 - INFO: 10.62.11.51 is connect ID 5
-2018-06-07 11:12:03,151 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 10172 - INFO: 10.62.11.51 is close
-2018-06-07 11:14:48,339 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 8612 - INFO: 10.62.11.51 is connect ID 6
-2018-06-07 11:14:48,371 - D:\huangyf\git\devops_moniter\zabbix\My_Mysql_Application.py - 8612 - INFO: 10.62.11.51 is close
+2018-07-10 09:26:00,628 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 9468 - INFO: 10.62.11.51 is connect ID 149
+2018-07-10 09:26:00,831 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 9468 - INFO: 10.62.11.51 is close
+2018-07-10 09:26:04,010 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 9204 - INFO: 10.62.11.51 is connect ID 150
+2018-07-10 09:26:04,026 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 9204 - INFO: 10.62.11.51 is close
+2018-07-10 09:28:59,371 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 9240 - INFO: 10.62.11.51 is connect ID 151
+2018-07-10 09:28:59,378 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 9240 - INFO: 10.62.11.51 is close
+2018-07-10 09:29:06,079 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 9608 - INFO: 10.62.11.51 is connect ID 152
+2018-07-10 09:29:06,088 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 9608 - INFO: 10.62.11.51 is close
+2018-07-10 13:33:59,220 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 8592 - INFO: 10.62.11.51 is connect ID 156
+2018-07-10 13:33:59,227 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 8592 - INFO: 10.62.11.51 is close
+2018-07-10 13:34:48,213 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 10732 - INFO: 10.62.11.51 is connect ID 157
+2018-07-10 13:34:48,221 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 10732 - INFO: 10.62.11.51 is close
+2018-07-10 13:35:28,056 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 6624 - INFO: 10.62.11.51 is connect ID 158
+2018-07-10 13:35:28,059 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 6624 - INFO: 10.62.11.51 is close
+2018-07-10 13:35:35,486 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 10380 - INFO: 10.62.11.51 is connect ID 159
+2018-07-10 13:35:35,494 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 10380 - INFO: 10.62.11.51 is close
+2018-07-10 13:41:46,197 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 8868 - INFO: 10.62.11.51 is connect ID 160
+2018-07-10 13:41:46,207 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 8868 - INFO: 10.62.11.51 is close
+2018-07-10 13:42:25,775 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 8256 - INFO: 10.62.11.51 is connect ID 161
+2018-07-10 13:42:25,782 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 8256 - INFO: 10.62.11.51 is close
+2018-07-10 13:42:47,615 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 11204 - INFO: 10.62.11.51 is connect ID 162
+2018-07-10 13:42:47,630 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 11204 - INFO: 10.62.11.51 is close
+2018-07-10 13:48:09,684 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 11092 - INFO: 10.62.11.51 is connect ID 163
+2018-07-10 13:48:09,691 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 11092 - INFO: 10.62.11.51 is close
+2018-07-10 13:50:11,325 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 7460 - INFO: 10.62.11.51 is connect ID 164
+2018-07-10 13:50:11,326 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 7460 - INFO: 10.62.11.51 is close
+2018-07-10 13:50:12,615 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 10164 - INFO: 10.62.11.51 is connect ID 165
+2018-07-10 13:50:12,617 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 10164 - INFO: 10.62.11.51 is close
+2018-07-10 13:53:17,098 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 6632 - INFO: 10.62.11.51 is connect ID 166
+2018-07-10 13:53:17,098 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 6632 - INFO: 10.62.11.51 is close
+2018-07-10 13:53:22,667 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 11012 - INFO: 10.62.11.51 is connect ID 167
+2018-07-10 13:53:22,674 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 11012 - INFO: 10.62.11.51 is close
+2018-07-10 13:53:55,947 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 8124 - INFO: 10.62.11.51 is connect ID 168
+2018-07-10 13:53:55,956 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 8124 - INFO: 10.62.11.51 is close
+2018-07-10 13:56:46,384 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 7776 - INFO: 10.62.11.51 is connect ID 169
+2018-07-10 13:56:46,391 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 7776 - INFO: 10.62.11.51 is close
+2018-07-10 13:57:35,535 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 7464 - INFO: 10.62.11.51 is connect ID 170
+2018-07-10 14:01:22,134 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 8328 - INFO: 10.62.11.51 is connect ID 171
+2018-07-10 14:01:22,141 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 8328 - INFO: 10.62.11.51 is close
+2018-07-10 14:02:50,476 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 9412 - INFO: 10.62.11.51 is connect ID 172
+2018-07-10 14:02:50,486 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 9412 - INFO: 10.62.11.51 is close
+2018-07-10 14:03:20,068 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 10868 - INFO: 10.62.11.51 is connect ID 173
+2018-07-10 14:03:20,076 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 10868 - INFO: 10.62.11.51 is close
+2018-07-10 14:03:36,194 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 8012 - INFO: 10.62.11.51 is connect ID 174
+2018-07-10 14:03:36,200 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 8012 - INFO: 10.62.11.51 is close
+2018-07-10 14:04:09,042 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 8224 - INFO: 10.62.11.51 is connect ID 175
+2018-07-10 14:04:09,051 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 8224 - INFO: 10.62.11.51 is close
+2018-07-10 14:04:25,377 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 7236 - INFO: 10.62.11.51 is connect ID 176
+2018-07-10 14:04:25,384 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 7236 - INFO: 10.62.11.51 is close
+2018-07-10 14:05:22,694 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 10036 - INFO: 10.62.11.51 is connect ID 177
+2018-07-10 14:05:22,703 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 10036 - INFO: 10.62.11.51 is close
+2018-07-10 14:18:29,690 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 2984 - INFO: 10.62.11.51 is connect ID 178
+2018-07-10 14:18:29,700 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 2984 - INFO: 10.62.11.51 is close
+2018-07-10 14:23:44,125 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 8984 - INFO: 10.62.11.51 is connect ID 179
+2018-07-10 14:23:44,132 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 8984 - INFO: 10.62.11.51 is close
+2018-07-10 14:50:59,098 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 8168 - INFO: 10.62.11.51 is connect ID 185
+2018-07-10 14:50:59,105 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 8168 - INFO: 10.62.11.51 is close
+2018-07-10 15:02:29,513 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 8128 - INFO: 10.62.11.51 is connect ID 186
+2018-07-10 15:02:29,519 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 8128 - INFO: 10.62.11.51 is close
+2018-07-10 15:02:34,269 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 10388 - INFO: 10.62.11.51 is connect ID 187
+2018-07-10 15:02:34,276 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 10388 - INFO: 10.62.11.51 is close
+2018-07-10 15:02:36,375 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 10152 - INFO: 10.62.11.51 is connect ID 188
+2018-07-10 15:02:36,381 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 10152 - INFO: 10.62.11.51 is close
+2018-07-10 15:02:39,861 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 11148 - INFO: 10.62.11.51 is connect ID 189
+2018-07-10 15:02:39,868 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 11148 - INFO: 10.62.11.51 is close
+2018-07-10 15:21:03,246 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 7344 - INFO: 10.62.11.51 is connect ID 190
+2018-07-10 15:21:03,246 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 7344 - ERROR: remote mysql have something wrong name 'manylist_filter' is not defined
+Traceback (most recent call last):
+  File "D:\huangyf\git\devops_moniter\zabbix\My_Command.py", line 36, in <module>
+    manylist_filter(aa.dbname_db_all())
+NameError: name 'manylist_filter' is not defined
+2018-07-10 15:21:03,302 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 7344 - ERROR: something wrong name 'my_Mysql_status' is not defined
+Traceback (most recent call last):
+  File "D:\huangyf\git\devops_moniter\zabbix\My_Command.py", line 46, in <module>
+    aa=my_Mysql_status(dbhost,dbport,dbname,dbuser,dbpassword)
+NameError: name 'my_Mysql_status' is not defined
+2018-07-10 15:21:40,737 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 10848 - INFO: 10.62.11.51 is connect ID 191
+2018-07-10 15:21:40,737 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 10848 - ERROR: remote mysql have something wrong name 'manylist_filter' is not defined
+Traceback (most recent call last):
+  File "D:\huangyf\git\devops_moniter\zabbix\My_Command.py", line 36, in <module>
+    manylist_filter(aa.dbname_db_all())
+NameError: name 'manylist_filter' is not defined
+2018-07-10 15:21:40,740 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 10848 - ERROR: something wrong name 'my_Mysql_status' is not defined
+Traceback (most recent call last):
+  File "D:\huangyf\git\devops_moniter\zabbix\My_Command.py", line 46, in <module>
+    aa=my_Mysql_status(dbhost,dbport,dbname,dbuser,dbpassword)
+NameError: name 'my_Mysql_status' is not defined
+2018-07-10 15:22:57,819 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 8168 - INFO: 10.62.11.51 is connect ID 192
+2018-07-10 15:22:57,821 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 8168 - ERROR: remote mysql have something wrong name 'manylist_filter' is not defined
+Traceback (most recent call last):
+  File "D:\huangyf\git\devops_moniter\zabbix\My_Command.py", line 36, in <module>
+    manylist_filter(aa.dbname_db_all())
+NameError: name 'manylist_filter' is not defined
+2018-07-10 15:22:57,822 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 8168 - ERROR: something wrong name 'my_Mysql_status' is not defined
+Traceback (most recent call last):
+  File "D:\huangyf\git\devops_moniter\zabbix\My_Command.py", line 46, in <module>
+    aa=my_Mysql_status(dbhost,dbport,dbname,dbuser,dbpassword)
+NameError: name 'my_Mysql_status' is not defined
+2018-07-10 15:24:21,698 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 10164 - INFO: 10.62.11.51 is connect ID 193
+2018-07-10 15:24:21,700 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 10164 - ERROR: remote mysql have something wrong name 'manylist_filter' is not defined
+Traceback (most recent call last):
+  File "D:\huangyf\git\devops_moniter\zabbix\My_Command.py", line 36, in <module>
+    manylist_filter(aa.dbname_db_all())
+NameError: name 'manylist_filter' is not defined
+2018-07-10 15:27:20,415 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 10532 - INFO: 10.62.11.51 is connect ID 194
+2018-07-10 15:27:20,421 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 10532 - INFO: 10.62.11.51 is close
+2018-07-10 15:27:22,719 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 10772 - INFO: 10.62.11.51 is connect ID 195
+2018-07-10 15:27:22,723 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 10772 - INFO: 10.62.11.51 is close
+2018-07-10 15:27:27,440 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 8836 - INFO: 10.62.11.51 is connect ID 196
+2018-07-10 15:27:27,444 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 8836 - INFO: 10.62.11.51 is close
+2018-07-10 15:43:13,519 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 9416 - INFO: 10.62.11.51 is connect ID 203
+2018-07-10 15:43:13,525 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 9416 - INFO: 10.62.11.51 is close
+2018-07-10 15:43:14,727 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 8828 - INFO: 10.62.11.51 is connect ID 204
+2018-07-10 15:43:14,732 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 8828 - INFO: 10.62.11.51 is close
+2018-07-10 15:57:39,954 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 6760 - INFO: 10.62.11.51 is connect ID 205
+2018-07-10 15:57:39,960 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 6760 - INFO: 10.62.11.51 is close
+2018-07-10 16:07:09,180 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 10416 - INFO: 10.62.11.51 is connect ID 206
+2018-07-10 16:07:09,186 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 10416 - INFO: 10.62.11.51 is close
+2018-07-10 16:07:12,526 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 10300 - INFO: 10.62.11.51 is connect ID 207
+2018-07-10 16:07:12,532 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 10300 - INFO: 10.62.11.51 is close
+2018-07-10 16:07:17,632 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 10244 - INFO: 10.62.11.51 is connect ID 208
+2018-07-10 16:07:17,637 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 10244 - INFO: 10.62.11.51 is close
+2018-07-10 16:07:19,374 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 10632 - INFO: 10.62.11.51 is connect ID 209
+2018-07-10 16:07:19,378 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 10632 - INFO: 10.62.11.51 is close
+2018-07-10 16:07:20,614 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 8280 - INFO: 10.62.11.51 is connect ID 210
+2018-07-10 16:07:20,617 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 8280 - INFO: 10.62.11.51 is close
+2018-07-10 16:07:37,378 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 10352 - INFO: 10.62.11.51 is connect ID 211
+2018-07-10 16:07:37,384 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 10352 - INFO: 10.62.11.51 is close
+2018-07-10 16:12:46,102 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 8784 - INFO: 10.62.11.51 is connect ID 212
+2018-07-10 16:12:46,108 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 8784 - INFO: 10.62.11.51 is close
+2018-07-10 16:12:54,023 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 7396 - INFO: 10.62.11.51 is connect ID 213
+2018-07-10 16:12:54,028 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 7396 - ERROR: remote mysql have something wrong string indices must be integers
+Traceback (most recent call last):
+  File "D:\huangyf\git\devops_moniter\zabbix\My_Command.py", line 34, in <module>
+    mylist_filter.manylist_filter(aa.dbname_db_data(my_args.dbdata))
+  File "D:\huangyf\git\devops_moniter\zabbix\tool\logic\My_Tool.py", line 42, in manylist_filter
+    print key[self.key]
+TypeError: string indices must be integers
+2018-07-10 16:13:02,410 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 6824 - INFO: 10.62.11.51 is connect ID 214
+2018-07-10 16:13:02,414 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 6824 - INFO: 10.62.11.51 is close
+2018-07-10 16:13:06,890 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 10576 - INFO: 10.62.11.51 is connect ID 215
+2018-07-10 16:13:06,895 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 10576 - ERROR: remote mysql have something wrong string indices must be integers
+Traceback (most recent call last):
+  File "D:\huangyf\git\devops_moniter\zabbix\My_Command.py", line 34, in <module>
+    mylist_filter.manylist_filter(aa.dbname_db_data(my_args.dbdata))
+  File "D:\huangyf\git\devops_moniter\zabbix\tool\logic\My_Tool.py", line 42, in manylist_filter
+    print key[self.key]
+TypeError: string indices must be integers
+2018-07-10 16:14:50,999 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 10024 - INFO: 10.62.11.51 is connect ID 216
+2018-07-10 16:14:51,003 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 10024 - ERROR: remote mysql have something wrong string indices must be integers
+Traceback (most recent call last):
+  File "D:\huangyf\git\devops_moniter\zabbix\My_Command.py", line 34, in <module>
+    mylist_filter.manylist_filter(aa.dbname_db_data(my_args.dbdata))
+  File "D:\huangyf\git\devops_moniter\zabbix\tool\logic\My_Tool.py", line 42, in manylist_filter
+    print key[self.key]
+TypeError: string indices must be integers
+2018-07-10 16:17:53,410 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 7232 - INFO: 10.62.11.51 is connect ID 217
+2018-07-10 16:17:53,415 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 7232 - ERROR: remote mysql have something wrong string indices must be integers
+Traceback (most recent call last):
+  File "D:\huangyf\git\devops_moniter\zabbix\My_Command.py", line 34, in <module>
+    mylist_filter.manylist_filter(aa.dbname_db_data(my_args.dbdata))
+  File "D:\huangyf\git\devops_moniter\zabbix\tool\logic\My_Tool.py", line 42, in manylist_filter
+    print key[self.key]
+TypeError: string indices must be integers
+2018-07-10 16:18:17,201 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 1948 - INFO: 10.62.11.51 is connect ID 218
+2018-07-10 16:18:17,207 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 1948 - ERROR: remote mysql have something wrong string indices must be integers
+Traceback (most recent call last):
+  File "D:\huangyf\git\devops_moniter\zabbix\My_Command.py", line 34, in <module>
+    mylist_filter.manylist_filter(aa.dbname_db_data(my_args.dbdata))
+  File "D:\huangyf\git\devops_moniter\zabbix\tool\logic\My_Tool.py", line 42, in manylist_filter
+    print key[self.key]
+TypeError: string indices must be integers
+2018-07-10 16:18:39,219 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 10328 - INFO: 10.62.11.51 is connect ID 219
+2018-07-10 16:18:39,223 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 10328 - INFO: 10.62.11.51 is close
+2018-07-10 16:18:42,259 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 10152 - INFO: 10.62.11.51 is connect ID 220
+2018-07-10 16:18:42,265 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 10152 - INFO: 10.62.11.51 is close
+2018-07-10 16:18:52,094 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 7896 - INFO: 10.62.11.51 is connect ID 221
+2018-07-10 16:18:52,098 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 7896 - INFO: 10.62.11.51 is close
+2018-07-10 16:19:08,355 - D:\huangyf\git\devops_moniter\zabbix\tool\My_Mysql_Application.py - 10476 - INFO: 10.62.11.51 is connect ID 222
+2018-07-10 16:19:08,359 - D:\huangyf\git\devops_moniter\zabbix\My_Command.py - 10476 - INFO: 10.62.11.51 is close
