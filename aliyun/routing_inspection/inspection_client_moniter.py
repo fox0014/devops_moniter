@@ -14,7 +14,7 @@ def Regionsmain(accessKey,accessSecret,region):
     request.set_method('POST')
     request.set_version('2018-03-08')
     request.set_action_name('QueryMetricData')
-    request.add_query_param('Dimensions', {'dimension':'i-uf6dxalf5envoxoy6w59'})
+    request.add_query_param('Dimensions', {'dimension':'xxx'})
     request.add_query_param('Metric', 'CPUUtilization')
     request.add_query_param('Project', 'acs_ecs_dashboard')
     request.add_query_param('RegionId', 'cn-shanghai')
