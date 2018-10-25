@@ -2,3 +2,5 @@ pip install json
 pip install aliyun-python-sdk-core
 pip install aliyun-python-sdk-ecs
 pip install Celery
+pip install pyyaml
+pip install -U "celery[redis]"
