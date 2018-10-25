@@ -1,0 +1,4 @@
+pip install json
+pip install aliyun-python-sdk-core
+pip install aliyun-python-sdk-ecs
+pip install Celery
