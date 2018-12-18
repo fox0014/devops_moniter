@@ -79,11 +79,15 @@ class Mypy_mongo1(object):
     def collecion_del(self):
         item3 = self.db01[self.des_collections].delete_many({'createdAt':{"$lt":self.date_1}})
         now_1=datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        logging.info('Dbname: %s ,IP: %s ,%s Collections %s del count: %s' % (self.Authmon1['authSource'],self.Authmon1['server']+':',now_1,self.Authmon1['authSource'],item2.deleted_count)) 
+        logging.info('Dbname: %s ,IP: %s ,%s Collections %s del count: %s' % (self.Authmon1['authSource'],self.Authmon1['server']+':',now_1,self.Authmon1['authSource'],item3.deleted_count)) 
     def collecion_insert(self,data):
-        item3 = self.db01[self.des_collections].insert(data)
+        item3 = self.db01[self.des_collections].insert_one(data)
         now_1=datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-        logging.info('Dbname: %s ,IP: %s ,%s Collections %s del count: %s' % (self.Authmon1['authSource'],self.Authmon1['server']+':',now_1,self.Authmon1['authSource'],item3)) 
+        logging.info('Dbname: %s ,IP: %s ,%s Collections %s insert: %s' % (self.Authmon1['authSource'],self.Authmon1['server']+':',now_1,self.Authmon1['authSource'],item3)) 
+    def collecion_insert_update(self,key,data):
+        item3 = self.db01[self.des_collections].update_one(key,data,upsert=True)
+        now_1=datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        logging.info('Dbname: %s ,IP: %s ,%s Collections %s insert_update: %s' % (self.Authmon1['authSource'],self.Authmon1['server']+':',now_1,self.Authmon1['authSource'],item3)) 
 
 def my_mongo_del(server,user,passwd,authSource,action_date,des_collections,replicaSet,readPreference):
     Today = Mypy_mongo1(server=server,user=user,passwd=passwd,authSource=authSource,action_date=action_date,des_collections=des_collections,replicaSet=replicaSet,readPreference=readPreference)

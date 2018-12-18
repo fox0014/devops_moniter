@@ -19,7 +19,7 @@ def aliyuntaskRegionsmain(accessKey,accessSecret,region):
     result = Regionsmain(accessKey,accessSecret,region)
     Today = Mypy_mongo1(server='10.68.60.114:27017',user='',passwd='',authSource='moniter',action_date=117,des_collections='Aliyunmetadata',replicaSet='rs0',readPreference='readPreference')
     Today.conn()
-    Today.collecion_insert({'aliyuntype':'aliyunRegions','zone':result,'date':datetime.datetime.now()})
+    Today.collecion_insert_update({'aliyuntype':'aliyunRegions'},{'$set':{'zone':result,'date':datetime.datetime.now()}})
     return result
 
 if __name__ == '__main__':
